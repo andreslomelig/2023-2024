@@ -16,10 +16,8 @@ We would like to thank our sponsors.
 *  Rebasa: https://www.sirebasa.com/
 
 ![]() <img src="https://github.com/UPRobotics/2023-2024/assets/82061637/0da72fed-9bec-4462-8ed1-879c146f39f4" width="120">
-
-![image](https://github.com/UPRobotics/2023-2024/assets/82061637/0da72fed-9bec-4462-8ed1-879c146f39f4){width=20%}
-![image](https://github.com/UPRobotics/2023-2024/assets/82061637/a95bf983-cbb2-4a71-a77b-e5852bf1b084)
-![image](https://github.com/UPRobotics/2023-2024/assets/82061637/b57a0895-727f-474a-a67f-9afda799f749){width=20%}
+![]() <img src="https://github.com/UPRobotics/2023-2024/assets/82061637/a95bf983-cbb2-4a71-a77b-e5852bf1b084" width="120">
+![]() <img src="https://github.com/UPRobotics/2023-2024/assets/82061637/b57a0895-727f-474a-a67f-9afda799f749" width="120">
 
 
 
