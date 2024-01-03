@@ -1,0 +1,6 @@
+Stop sign
+Fire hydrant
+Person
+Animal
+Auto part
+Human face
