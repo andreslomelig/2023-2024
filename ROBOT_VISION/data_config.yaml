@@ -1,0 +1,12 @@
+path: 'C:\Users\andre\Desktop\Vision_Robot\Code\Dataset'  # dataset root dir
+train: images/train  # train images (relative to 'path')
+val: images/train  # val images (relative to 'path')
+
+# Classes
+names:
+  0: Stop sign
+  1: Fire hydrant
+  2: Person
+  3: Animal
+  4: Auto part
+  5: Human face
