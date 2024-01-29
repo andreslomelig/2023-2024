@@ -73,12 +73,59 @@
 
     <link name="01_Placa">
         <visual>
-            <origin xyz="-0.43 1.015 0.55" rpy="1.570795 ${PI} 0.0"/>
+            <origin xyz="0.26 0.015 0.27" rpy="1.570795 ${PI} 0.0"/>
             <geometry>
                 <mesh filename="package://ixnaminki_description/meshes/FLIPPER_ASSY/Placa.STL" scale="0.004 0.004 0.004"/>
             </geometry>
         </visual> 
     </link>
+
+    <link name="02_Placa">
+        <visual>
+            <origin xyz="0.26 -0.015 0.27" rpy="1.570795 ${PI} 0.0"/>
+            <geometry>
+                <mesh filename="package://ixnaminki_description/meshes/FLIPPER_ASSY/Placa.STL" scale="0.004 0.004 0.004"/>
+            </geometry>
+        </visual> 
+    </link>
+
+    <link name="03_Placa">
+        <visual>
+            <origin xyz="-0.26 0.015 -0.27" rpy="1.570795 0.0 0.0"/>
+            <geometry>
+                <mesh filename="package://ixnaminki_description/meshes/FLIPPER_ASSY/Placa.STL" scale="0.004 0.004 0.004"/>
+            </geometry>
+        </visual> 
+    </link>
+
+    <link name="04_Placa">
+        <visual>
+            <origin xyz="-0.26 -0.015 -0.27" rpy="1.570795 0.0 0.0"/>
+            <geometry>
+                <mesh filename="package://ixnaminki_description/meshes/FLIPPER_ASSY/Placa.STL" scale="0.004 0.004 0.004"/>
+            </geometry>
+        </visual> 
+    </link>
+
+    <link name="01_FlatSprocket">
+        <visual>
+            <origin xyz="-0.55 0.0 -0.47" rpy="1.570795 0.0 0.0"/>
+            <geometry>
+                <mesh filename="package://ixnaminki_description/meshes/ASSY_TrenInferior/FlatSprocket.STL" scale="0.004 0.004 0.004"/>
+            </geometry>
+        </visual> 
+    </link>
+
+
+    <link name="02_FlatSprocket">
+        <visual>
+            <origin xyz="-0.55 0.0 -0.47" rpy="1.570795 0.0 0.0"/>
+            <geometry>
+                <mesh filename="package://ixnaminki_description/meshes/ASSY_TrenInferior/FlatSprocket.STL" scale="0.004 0.004 0.004"/>
+            </geometry>
+        </visual> 
+    </link>
+
 
 
     <joint name="virtual_joint" type="fixed">
@@ -127,10 +174,50 @@
     <joint name ="joint_7" type="revolute">
         <parent link="02_EjePrincipal2"/>
         <child link = "01_Placa"/>
-        <origin xyz="0.0 0.0 0.0"/>
+        <origin xyz="-0.69 1.0 0.28"/>
         <axis xyz="0 1 0"/>
         <limit lower="-1.570795" upper="1.570795" 
                effort="${effort}" velocity="${velocity}"/>
+    </joint>
+
+    <joint name ="joint_8" type="revolute">
+        <parent link="02_EjePrincipal2"/>
+        <child link = "02_Placa"/>
+        <origin xyz="-0.69 -1.0 0.28"/>
+        <axis xyz="0 1 0"/>
+        <limit lower="-1.570795" upper="1.570795" 
+               effort="${effort}" velocity="${velocity}"/>
+    </joint>
+
+    <joint name ="joint_9" type="revolute">
+        <parent link="02_EjePrincipal"/>
+        <child link = "03_Placa"/>
+        <origin xyz="0.84 1.0 0.29"/>
+        <axis xyz="0 1 0"/>
+        <limit lower="-1.570795" upper="1.570795" 
+               effort="${effort}" velocity="${velocity}"/>
+    </joint>
+
+    <joint name ="joint_10" type="revolute">
+        <parent link="02_EjePrincipal"/>
+        <child link = "04_Placa"/>
+        <origin xyz="0.84 -1.0 0.29"/>
+        <axis xyz="0 1 0"/>
+        <limit lower="-1.570795" upper="1.570795" 
+               effort="${effort}" velocity="${velocity}"/>
+    </joint>
+
+
+    <joint name="joint_11" type="fixed">
+        <origin xyz="-0.69 -0.015 0.28" rpy="0.0 0.0 0.0"/>
+        <parent link="01_Placa"/>
+        <child link="01_FlatSprocket"/>
+    </joint>
+
+    <joint name="joint_12" type="fixed">
+        <origin xyz="-0.69 0.015 0.28" rpy="0.0 0.0 0.0"/>
+        <parent link="02_Placa"/>
+        <child link="02_FlatSprocket"/>
     </joint>
 
 </robot>
