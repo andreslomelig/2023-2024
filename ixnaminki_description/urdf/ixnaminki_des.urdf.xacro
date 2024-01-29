@@ -126,6 +126,25 @@
         </visual> 
     </link>
 
+    <link name="03_FlatSprocket">
+        <visual>
+            <origin xyz="0.01 0.0 -0.492" rpy="1.570795 0.0 0.0"/>
+            <geometry>
+                <mesh filename="package://ixnaminki_description/meshes/ASSY_TrenInferior/FlatSprocket.STL" scale="0.004 0.004 0.004"/>
+            </geometry>
+        </visual> 
+    </link>
+
+    <link name="04_FlatSprocket">
+        <visual>
+            <origin xyz="0.01 0.0 -0.492" rpy="1.570795 0.0 0.0"/>
+            <geometry>
+                <mesh filename="package://ixnaminki_description/meshes/ASSY_TrenInferior/FlatSprocket.STL" scale="0.004 0.004 0.004"/>
+            </geometry>
+        </visual> 
+    </link>
+
+
 
 
     <joint name="virtual_joint" type="fixed">
@@ -220,4 +239,15 @@
         <child link="02_FlatSprocket"/>
     </joint>
 
+    <joint name="joint_13" type="fixed">
+        <origin xyz="0.84 -0.015 0.29" rpy="0.0 0.0 0.0"/>
+        <parent link="03_Placa"/>
+        <child link="03_FlatSprocket"/>
+    </joint>
+
+    <joint name="joint_14" type="fixed">
+        <origin xyz="0.84 0.015 0.29" rpy="0.0 0.0 0.0"/>
+        <parent link="04_Placa"/>
+        <child link="04_FlatSprocket"/>
+    </joint>
 </robot>
