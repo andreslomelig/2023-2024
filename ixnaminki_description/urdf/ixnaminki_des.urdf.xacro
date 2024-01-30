@@ -8,6 +8,8 @@
 
     <link name="world"/>
 
+<!-- CUERPO -->
+
     <link name="base_link">
         <visual>
             <origin xyz="-1.25 0.5 0.1" rpy="1.570795 0.0 0.0"/>
@@ -23,6 +25,9 @@
             <geometry>
                 <mesh filename="package://ixnaminki_description/meshes/ASSY_TrenInferior/02_EjePrincipal.STL" scale="0.004 0.004 0.004"/>
             </geometry>
+            <material name="base">
+                <color rgba="0.73 0.65 0.69 0.8"/>
+            </material>
         </visual> 
     </link>
 
@@ -32,6 +37,9 @@
             <geometry>
                 <mesh filename="package://ixnaminki_description/meshes/ASSY_TrenInferior/02_EjePrincipal.STL" scale="0.004 0.004 0.004"/>
             </geometry>
+            <material name="base">
+                <color rgba="0.73 0.65 0.69 0.8"/>
+            </material>
         </visual> 
     </link>
 
@@ -250,4 +258,84 @@
         <parent link="04_Placa"/>
         <child link="04_FlatSprocket"/>
     </joint>
+
+<!-- BRAZO -->
+    
+    <link name="base_link_arm">
+        <visual>
+            <origin xyz="0.0 0.0 0.0" rpy="1.570795 0.0 0.0"/>
+            <geometry>
+                <mesh filename="package://ixnaminki_description/meshes/BRAZO/base_002.STL" scale="0.004 0.004 0.004"/>
+            </geometry>
+            <material name="base2">
+                <color rgba="1.0 0.0 1.0 1.0"/>
+            </material>
+        </visual>
+    </link>
+
+    <link name="rotation_base">
+        <visual>
+            <origin xyz="-0.27 -0.26 0.0" rpy="1.570795 0.0 1.570795"/>
+            <geometry>
+                <mesh filename="package://ixnaminki_description/meshes/BRAZO/base_004.STL" scale="0.004 0.004 0.004"/>
+            </geometry>
+            <material name="base3">
+                <color rgba="0.40 0.211 0.72 0.46"/>
+            </material>
+        </visual>
+    </link>
+
+    <link name="01_oreja">
+        <visual>
+            <origin xyz="0.0 0.0 0.0" rpy="1.570795 0.0 0.0"/>
+            <geometry>
+                <mesh filename="package://ixnaminki_description/meshes/BRAZO/Orejas.STL" scale="0.004 0.004 0.004"/>
+            </geometry>
+            <material name="base3">
+                <color rgba="0.40 0.211 0.72 0.46"/>
+            </material>
+        </visual>
+    </link>
+
+    <link name="02_oreja">
+        <visual>
+            <origin xyz="0.0 0.0 0.0" rpy="1.570795 0.0 0.0"/>
+            <geometry>
+                <mesh filename="package://ixnaminki_description/meshes/BRAZO/Orejas.STL" scale="0.004 0.004 0.004"/>
+            </geometry>
+            <material name="base3">
+                <color rgba="0.40 0.211 0.72 0.46"/>
+            </material>
+        </visual>
+    </link>
+    
+
+    <joint name="joint_15" type="fixed">
+        <origin xyz="0.1 0.25 0.55" rpy="0.0 0.0 0.0"/>
+        <parent link="base_link"/>
+        <child link="base_link_arm"/>
+    </joint>
+
+    <joint name ="joint_16" type="revolute">
+        <parent link="base_link_arm"/>
+        <child link = "rotation_base"/>
+        <origin xyz="0.29 -0.29 0.05"/>
+        <axis xyz="0 0 1"/>
+        <limit lower="-1.570795" upper="1.570795" 
+               effort="${effort}" velocity="${velocity}"/>
+    </joint>
+
+    <joint name="joint_17" type="fixed">
+        <origin xyz="-0.15 0.15 0.25" rpy="1.570795 0.0 0.0"/>
+        <parent link="rotation_base"/>
+        <child link="01_oreja"/>
+    </joint>
+
+    <joint name="joint_18" type="fixed">
+        <origin xyz="-0.15 -0.15 0.25" rpy="1.570795 0.0 0.0"/>
+        <parent link="rotation_base"/>
+        <child link="02_oreja"/>
+    </joint>
+
+
 </robot>
