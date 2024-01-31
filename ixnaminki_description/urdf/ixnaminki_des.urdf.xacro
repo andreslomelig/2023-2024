@@ -16,6 +16,9 @@
             <geometry>
                 <mesh filename="package://ixnaminki_description/meshes/ASSY_TrenInferior/01_Chasis.STL" scale="0.004 0.004 0.004"/>
             </geometry>
+            <material name="base00">
+                <color rgba="0.5 0.3 0.2 0.8"/>
+            </material>
         </visual>
     </link>
 
@@ -49,6 +52,7 @@
             <geometry>
                 <mesh filename="package://ixnaminki_description/meshes/ASSY_TrenInferior/PlateSprocket.STL" scale="0.004 0.004 0.004"/>
             </geometry>
+            <material name="base"/>
         </visual> 
     </link>
 
@@ -58,6 +62,7 @@
             <geometry>
                 <mesh filename="package://ixnaminki_description/meshes/ASSY_TrenInferior/PlateSprocket.STL" scale="0.004 0.004 0.004"/>
             </geometry>
+            <material name="base"/>
         </visual> 
     </link>
 
@@ -67,6 +72,7 @@
             <geometry>
                 <mesh filename="package://ixnaminki_description/meshes/ASSY_TrenInferior/PlateSprocket.STL" scale="0.004 0.004 0.004"/>
             </geometry>
+            <material name="base"/>
         </visual> 
     </link>
 
@@ -76,6 +82,7 @@
             <geometry>
                 <mesh filename="package://ixnaminki_description/meshes/ASSY_TrenInferior/PlateSprocket.STL" scale="0.004 0.004 0.004"/>
             </geometry>
+            <material name="base"/>
         </visual> 
     </link>
 
@@ -121,6 +128,7 @@
             <geometry>
                 <mesh filename="package://ixnaminki_description/meshes/ASSY_TrenInferior/FlatSprocket.STL" scale="0.004 0.004 0.004"/>
             </geometry>
+            <material name="base"/>
         </visual> 
     </link>
 
@@ -131,6 +139,7 @@
             <geometry>
                 <mesh filename="package://ixnaminki_description/meshes/ASSY_TrenInferior/FlatSprocket.STL" scale="0.004 0.004 0.004"/>
             </geometry>
+            <material name="base"/>
         </visual> 
     </link>
 
@@ -140,6 +149,7 @@
             <geometry>
                 <mesh filename="package://ixnaminki_description/meshes/ASSY_TrenInferior/FlatSprocket.STL" scale="0.004 0.004 0.004"/>
             </geometry>
+            <material name="base"/>
         </visual> 
     </link>
 
@@ -149,6 +159,7 @@
             <geometry>
                 <mesh filename="package://ixnaminki_description/meshes/ASSY_TrenInferior/FlatSprocket.STL" scale="0.004 0.004 0.004"/>
             </geometry>
+            <material name="base"/>
         </visual> 
     </link>
 
@@ -309,6 +320,126 @@
         </visual>
     </link>
     
+    <link name="eje_brazo">
+        <visual>
+            <origin xyz="0.0 0.0 0.0" rpy="1.570795 0.0 0.0"/>
+            <geometry>
+                <mesh filename="package://ixnaminki_description/meshes/BRAZO/eje20mm.STL" scale="0.004 0.004 0.004"/>
+            </geometry>
+            <material name="base4">
+                <color rgba="0.0 0.0 0.0 0.5"/>
+            </material>
+        </visual>
+    </link>
+
+        
+    <link name="placa_baja_brazo_izquierdo">
+        <visual>
+            <origin xyz="0.05 -0.1 -0.15" rpy="0.0 -1.04719 0.0"/>
+            <geometry>
+                <mesh filename="package://ixnaminki_description/meshes/BRAZO/Brazo.STL" scale="0.004 0.004 0.004"/>
+            </geometry>
+            <material name="base5">
+                <color rgba="1 0.0 0.3 0.9"/>
+            </material>
+        </visual>
+    </link>
+
+    <link name="placa_baja_brazo_derecho">
+        <visual>
+            <origin xyz="0.05 -0.05 -0.15" rpy="0.0 -1.04719 0.0"/>
+            <geometry>
+                <mesh filename="package://ixnaminki_description/meshes/BRAZO/BrazoB.STL" scale="0.004 0.004 0.004"/>
+            </geometry>
+            <material name="base5">
+                <color rgba="1 0.0 0.3 0.9"/>
+            </material>
+        </visual>
+    </link>
+
+    <link name="carcasa">
+        <visual>
+            <origin xyz="0.0 -0.11 0.0" rpy="0.5 0.0 1.570795"/>
+            <geometry>
+                <mesh filename="package://ixnaminki_description/meshes/BRAZO/Carcasa.STL" scale="0.005 0.004 0.004"/>
+            </geometry>
+            <material name="base6">
+                <color rgba="0.0 0.0 0.2 0.67"/>
+            </material>
+        </visual>
+    </link>
+
+    <link name="placa_alta_brazo_izquierdo">
+        <visual>
+            <origin xyz="-0.15 -0.045 -0.11" rpy="1.570795 0.0 0.0"/> 
+            <geometry>
+                <mesh filename="package://ixnaminki_description/meshes/BRAZO/Brazo2A.STL" scale="0.005 0.004 0.004"/>
+            </geometry>
+            <material name="base7">
+                <color rgba="0.0 0.0 0.7 0.98"/>
+            </material>
+        </visual>
+    </link>
+
+    <link name="placa_alta_brazo_derecho">
+        <visual>
+            <origin xyz="-0.15 -0.445 -0.11" rpy="1.570795 0.0 0.0"/> 
+            <geometry>
+                <mesh filename="package://ixnaminki_description/meshes/BRAZO/Brazo2A.STL" scale="0.005 0.004 0.004"/>
+            </geometry>
+            <material name="base7">
+                <color rgba="0.0 0.0 0.7 0.98"/>
+            </material>
+        </visual>
+    </link>
+
+    <link name="01_espaciador">
+        <visual>
+            <origin xyz="0.05 -0.07 0.05" rpy="0.0 0.0 -1.570795"/> 
+            <geometry>
+                <mesh filename="package://ixnaminki_description/meshes/BRAZO/espaciador.STL" scale="0.005 0.004 0.004"/>
+            </geometry>
+            <material name="base8">
+                <color rgba="0.0 0.0 0.0 1"/>
+            </material>
+        </visual>
+    </link>
+
+    <link name="02_espaciador">
+        <visual>
+            <origin xyz="-0.05 -0.07 0.05" rpy="0.0 0.0 -1.570795"/> 
+            <geometry>
+                <mesh filename="package://ixnaminki_description/meshes/BRAZO/espaciador.STL" scale="0.005 0.004 0.004"/>
+            </geometry>
+            <material name="base8">
+                <color rgba="0.0 0.0 0.0 1"/>
+            </material>
+        </visual>
+    </link>
+
+    <link name="03_espaciador">
+        <visual>
+            <origin xyz="0.05 -0.07 -0.05" rpy="0.0 0.0 -1.570795"/> 
+            <geometry>
+                <mesh filename="package://ixnaminki_description/meshes/BRAZO/espaciador.STL" scale="0.005 0.004 0.004"/>
+            </geometry>
+            <material name="base8">
+                <color rgba="0.0 0.0 0.0 1"/>
+            </material>
+        </visual>
+    </link>
+
+    <link name="04_espaciador">
+        <visual>
+            <origin xyz="-0.05 -0.07 -0.05" rpy="0.0 0.0 -1.570795"/> 
+            <geometry>
+                <mesh filename="package://ixnaminki_description/meshes/BRAZO/espaciador.STL" scale="0.005 0.004 0.004"/>
+            </geometry>
+            <material name="base8">
+                <color rgba="0.0 0.0 0.0 1"/>
+            </material>
+        </visual>
+    </link>
 
     <joint name="joint_15" type="fixed">
         <origin xyz="0.1 0.25 0.55" rpy="0.0 0.0 0.0"/>
@@ -337,5 +468,77 @@
         <child link="02_oreja"/>
     </joint>
 
+    <joint name="joint_19" type="fixed">
+        <origin xyz="-0.05 0.25 0.14" rpy="0.0 0.0 0.0"/>
+        <parent link="rotation_base"/>
+        <child link="eje_brazo"/>
+    </joint>
+
+    <joint name ="joint_20" type="revolute">
+        <parent link="eje_brazo"/>
+        <child link = "placa_baja_brazo_izquierdo"/>
+        <origin xyz="0.03 0.0 0.03"/>
+        <axis xyz="0 1 0"/>
+        <limit lower="-1.570795" upper="0.909" 
+               effort="${effort}" velocity="${velocity}"/>
+    </joint>
+
+    <joint name ="joint_21" type="revolute">
+        <parent link="eje_brazo"/>
+        <child link = "placa_baja_brazo_derecho"/>
+        <origin xyz="0.03 -0.44 0.03"/>
+        <axis xyz="0 1 0"/>
+        <limit lower="-1.570795" upper="0.909" 
+               effort="${effort}" velocity="${velocity}"/>
+    </joint>
+    
+    <joint name="joint_22" type="fixed">
+        <origin xyz="1.0 -0.32 1.3" rpy="0.0 0.0 0.0"/>
+        <parent link="placa_baja_brazo_izquierdo"/>
+        <child link="carcasa"/>
+    </joint>
+
+    <joint name ="joint_23" type="revolute">
+        <parent link="placa_baja_brazo_derecho"/>
+        <child link = "placa_alta_brazo_izquierdo"/>
+        <origin xyz="0.91 0.0 1.65"/>
+        <axis xyz="0 1 0"/>
+        <limit lower="-3.0" upper="3.0" 
+               effort="${effort}" velocity="${velocity}"/>
+    </joint>
+
+    <joint name ="joint_24" type="revolute">
+        <parent link="placa_baja_brazo_derecho"/>
+        <child link = "placa_alta_brazo_derecho"/>
+        <origin xyz="0.91 0.0 1.65"/>
+        <axis xyz="0 1 0"/>
+        <limit lower="-3.0" upper="3.0" 
+               effort="${effort}" velocity="${velocity}"/>
+    </joint>
+
+
+    <joint name="joint_25" type="fixed">
+        <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+        <parent link="placa_alta_brazo_derecho"/>
+        <child link="01_espaciador"/>
+    </joint>
+
+    <joint name="joint_26" type="fixed">
+        <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+        <parent link="placa_alta_brazo_derecho"/>
+        <child link="02_espaciador"/>
+    </joint>
+
+    <joint name="joint_27" type="fixed">
+        <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+        <parent link="placa_alta_brazo_derecho"/>
+        <child link="03_espaciador"/>
+    </joint>
+
+    <joint name="joint_28" type="fixed">
+        <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+        <parent link="placa_alta_brazo_derecho"/>
+        <child link="04_espaciador"/>
+    </joint>
 
 </robot>
